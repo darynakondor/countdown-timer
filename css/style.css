@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Cinzel Decorative", cursive;
+  background: linear-gradient(
+    90deg,
+    rgb(2, 2, 37) 0%,
+    rgba(0, 94, 112, 1) 57%,
+    rgb(4, 1, 31) 100%
+  );
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  overflow: clip;
+}
+
+.main__screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.main__moon {
+  position: absolute;
+  top: calc(50% - 14em);
+  left: calc(50% + 6em);
+  transform: translateZ(0);
+}
+.main__moon span {
+  width: 5em;
+  height: 5em;
+  transform: translateZ(0) translateX(-15em);
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 0;
+}
+.main__moon span::before {
+  background-image: radial-gradient(
+    100% 125% at 40% 50%,
+    rgba(0, 0, 0, 0) 40%,
+    black 50%
+  );
+  box-shadow: 0 0 0.5em inset;
+  border-radius: inherit;
+  width: 100%;
+  z-index: -1;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+}
+@keyframes textureSpin {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes santaOpacity {
+  from {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes contentOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.main__moon span::after {
+  animation: textureSpin 54s linear infinite reverse;
+  background-image: url("../img/moon.jpg");
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  width: 400%;
+  z-index: -2;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+}
+
+.main__trees,
+.main__trees span,
+.main__mountains,
+.main__mountains span,
+.main__santa,
+.main__santa span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+.main__santa span {
+  background: url("../img/santasleigh.svg");
+  background-size: cover;
+  width: 180px;
+  height: 75px;
+  top: calc(50% - 13.5em);
+  left: calc(50% - 11em);
+  animation: santaOpacity 11s linear infinite reverse;
+}
+.main__trees-6 {
+  bottom: -100%;
+  transition: bottom 4s ease 0s;
+}
+
+.main__trees-5 {
+  bottom: -80%;
+  transition: bottom 3.5s ease 0s;
+}
+
+.main__trees-4 {
+  bottom: -60%;
+  transition: bottom 3s ease 0s;
+}
+
+.main__trees-3 {
+  bottom: -50%;
+  transition: bottom 2.5s ease 0s;
+}
+
+.main__trees-2 {
+  bottom: -40%;
+  transition: bottom 2s ease 0s;
+}
+
+.main__trees-1 {
+  bottom: -20%;
+  transition: bottom 1.5s ease 0s;
+}
+
+.main__mountains span {
+  background: url("../img/mountains.svg") center / auto 80% repeat-x;
+}
+.main__mountains {
+  bottom: -170%;
+  transition: bottom 4.5s ease 0s;
+}
+.main__trees span,
+.main__mountains span,
+.block {
+  bottom: -6.6%;
+}
+.main__trees,
+.main__trees span {
+  z-index: 10;
+}
+  audio {
+      width: 150px;
+      height: 30px;
+    animation: contentOpacity 4s linear forwards;
+  }
+
+  audio::-webkit-media-controls-panel {
+    display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        width: 100%;
+        z-index: 0;
+        overflow: hidden;
+        text-align: right;
+        bottom: auto;
+        height: 30px;
+      text-align: center;
+    background: linear-gradient(90deg,
+                rgba(88, 88, 124, 0.484) 0%,
+                rgba(102, 135, 143, 0.459) 57%,
+                rgba(97, 93, 140, 0.443) 100%);
+   }
+
+  
+.main__trees-6 span {
+  background: url("../img/trees-06.svg") bottom / auto 100% repeat-x;
+}
+
+.main__trees-5 span {
+  background: url("../img/trees-05.svg") bottom / auto 100% repeat-x;
+}
+
+.main__trees-4 span {
+  background: url("../img/trees-04.svg") bottom / auto 90% repeat-x;
+}
+
+.main__trees-3 span {
+  background: url("../img/trees-03.svg") bottom / auto 70% repeat-x;
+}
+
+.main__trees-2 span {
+  background: url("../img/trees-02.svg") bottom / auto 70% repeat-x;
+}
+
+.main__trees-1 span {
+  background: url("../img/trees-01.svg") bottom / auto 60% repeat-x;
+}
+
+.main__mountains span {
+  background: url("../img/mountains.svg") center / auto 80% repeat-x;
+}
+.main__flex-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+.main__content {
+  width: 310px;
+  height: 310px;
+  padding: 50px 45px 0;
+  background: linear-gradient(
+    90deg,
+    rgba(60, 60, 90, 0.811) 0%,
+    rgba(7, 56, 67, 0.861) 57%,
+    rgba(6, 1, 51, 0.801) 100%
+  );
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  border-radius: 50%;
+  border: 1px dotted rgb(253, 224, 255);
+  color: rgb(245, 227, 246);
+  font-weight: 700;
+}
+.main__text {
+  margin-bottom: 15px;
+  font-size: 17px;
+animation: contentOpacity 2.5s linear forwards;
+}
+.main__countdown {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  gap: 12px;
+animation: contentOpacity 4.4s linear forwards;
+margin-bottom: 5px;
+}
+.main__list-item {
+  list-style: none;
+}
+.main__countdown time {
+  font-size: 22px;
+}

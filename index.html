@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <title>New Year</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <main class="main">
+            <div class="main__screen">
+                <div class="main__moon"><span></span></div>
+                <div class="main__santa"><span></span></div>
+                <div class="main__trees main__trees-6"><span></span></div>
+                <div class="main__trees main__trees-5"><span></span></div>
+                <div class="main__trees main__trees-4"><span></span></div>
+                <div class="main__trees main__trees-3"><span></span></div>
+                <div class="main__trees main__trees-2"><span></span></div>
+                <div class="main__trees main__trees-1"><span></span></div>
+                <div class="main__mountains"><span></span></div>
+            </div>
+            <div class="main__flex-container">
+                <div class="main__content">
+                    <h3 class="main__text">Santa Claus will fly to us with gifts through...</h3>
+                    <div class="main__countdown">
+                        <p><time id="days"></time> days</p>
+                        <p><time id="hours"></time> hours</p>
+                        <p><time id="minutes"></time> minutes</p>
+                        <p><time id="seconds"></time> seconds</p>
+                    </div>
+                    <audio id="audio" src="./audio/wham-last-christmas.mp3" controls></audio>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+    <script src="script/script.js"></script>
+  </body>
+</html>
