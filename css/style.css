@@ -1,8 +1,8 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  margin: 0;
   font-family: "Cinzel Decorative", cursive;
   background: linear-gradient(
     90deg,
@@ -18,19 +18,21 @@ body {
   overflow: clip;
 }
 
-.main__screen {
+.main__background {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
 }
+
 .main__moon {
   position: absolute;
-  top: calc(50% - 14em);
-  left: calc(50% + 6em);
+  top: calc(50% - 18em);
+  left: calc(50% + 15em);
   transform: translateZ(0);
 }
+
 .main__moon span {
   width: 5em;
   height: 5em;
@@ -40,6 +42,7 @@ body {
   overflow: hidden;
   z-index: 0;
 }
+
 .main__moon span::before {
   background-image: radial-gradient(
     100% 125% at 40% 50%,
@@ -55,33 +58,16 @@ body {
   position: absolute;
   height: 100%;
 }
+
 @keyframes textureSpin {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(-50%);
   }
 }
-@keyframes santaOpacity {
-  from {
-    transform: translateX(0);
-    opacity: 0;
-  }
 
-  to {
-    transform: translateX(-50%);
-  }
-}
-@keyframes contentOpacity {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 .main__moon span::after {
   animation: textureSpin 54s linear infinite reverse;
   background-image: url("../img/moon.jpg");
@@ -106,15 +92,31 @@ body {
   height: 100%;
   left: 0;
 }
+
+@keyframes santaOpacity {
+  from {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .main__santa span {
   background: url("../img/santasleigh.svg");
   background-size: cover;
   width: 180px;
   height: 75px;
-  top: calc(50% - 13.5em);
-  left: calc(50% - 11em);
+  top: calc(50% - 17.8em);
+  left: calc(50% - 1.5em);
   animation: santaOpacity 11s linear infinite reverse;
 }
+
+.main__trees {
+  z-index: 10;
+}
+
 .main__trees-6 {
   bottom: -100%;
   transition: bottom 4s ease 0s;
@@ -145,52 +147,6 @@ body {
   transition: bottom 1.5s ease 0s;
 }
 
-.main__mountains span {
-  background: url("../img/mountains.svg") center / auto 80% repeat-x;
-}
-.main__mountains {
-  bottom: -170%;
-  transition: bottom 4.5s ease 0s;
-}
-.main__trees span,
-.main__mountains span,
-.block {
-  bottom: -6.6%;
-}
-.main__trees,
-.main__trees span {
-  z-index: 10;
-}
-  audio {
-      width: 150px;
-      height: 30px;
-    animation: contentOpacity 4s linear forwards;
-  }
-
-  audio::-webkit-media-controls-panel {
-    display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        position: relative;
-        width: 100%;
-        z-index: 0;
-        overflow: hidden;
-        text-align: right;
-        bottom: auto;
-        height: 30px;
-      text-align: center;
-    background: linear-gradient(90deg,
-                rgba(88, 88, 124, 0.484) 0%,
-                rgba(102, 135, 143, 0.459) 57%,
-                rgba(97, 93, 140, 0.443) 100%);
-   }
-
-  
-.main__trees-6 span {
-  background: url("../img/trees-06.svg") bottom / auto 100% repeat-x;
-}
-
 .main__trees-5 span {
   background: url("../img/trees-05.svg") bottom / auto 100% repeat-x;
 }
@@ -211,20 +167,36 @@ body {
   background: url("../img/trees-01.svg") bottom / auto 60% repeat-x;
 }
 
+.main__mountains {
+  bottom: -170%;
+  transition: bottom 4.5s ease 0s;
+}
+
+.main__trees span,
+.main__mountains span,
+.block {
+  bottom: -6.6%;
+}
+
+.main__trees-6 span {
+  background: url("../img/trees-06.svg") bottom / auto 100% repeat-x;
+}
+
 .main__mountains span {
   background: url("../img/mountains.svg") center / auto 80% repeat-x;
 }
+
 .main__flex-container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
 }
+
 .main__content {
   width: 310px;
   height: 310px;
-  padding: 50px 45px 0;
+  padding: 50px 31.8px;
   background: linear-gradient(
     90deg,
     rgba(60, 60, 90, 0.811) 0%,
@@ -238,23 +210,70 @@ body {
   border: 1px dotted rgb(253, 224, 255);
   color: rgb(245, 227, 246);
   font-weight: 700;
-}
-.main__text {
-  margin-bottom: 15px;
-  font-size: 17px;
-animation: contentOpacity 2.5s linear forwards;
-}
-.main__countdown {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: 13px;
-  gap: 12px;
-animation: contentOpacity 4.4s linear forwards;
-margin-bottom: 5px;
+  align-items: center;
 }
-.main__list-item {
-  list-style: none;
+
+@keyframes contentOpacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
+
+.main__text {
+  font-size: 19px;
+  animation: contentOpacity 2.5s linear forwards;
+  line-height: 26px;
+}
+
+.main__countdown {
+  display: grid;
+  grid-template-columns: 0.5fr 0.9fr 1fr 1fr;
+  gap: 10px;
+  font-size: 15px;
+  animation: contentOpacity 4.4s linear forwards;
+  margin-bottom: 5px;
+}
+
+.main__countdown p {
+  line-height: 20px;
+}
+
 .main__countdown time {
   font-size: 22px;
+}
+
+.main__music {
+  width: 160.5px;
+  height: 30px;
+  animation: contentOpacity 4s linear forwards;
+  border-radius: 25px;
+  box-shadow: inset 24px 24px 85px #565a5b, inset -24px -24px 85px #ffffff;
+}
+
+.main__music::-webkit-media-controls-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+  text-align: right;
+  bottom: auto;
+  height: 30px;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(88, 88, 124, 0.484) 0%,
+    rgba(102, 135, 143, 0.459) 57%,
+    rgba(97, 93, 140, 0.443) 100%
+  );
 }
