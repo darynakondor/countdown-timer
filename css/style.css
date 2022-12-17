@@ -234,7 +234,7 @@ body {
 
 .main__countdown {
   display: grid;
-  grid-template-columns: 0.5fr 0.85fr 1fr 1fr;
+  grid-template-columns: 0.53fr 0.85fr 1fr 1fr;
   gap: 10px;
   font-size: 15px;
   animation: contentOpacity 4.4s linear forwards;

@@ -25,7 +25,7 @@ function scoreOfTime() {
 
     days === 1 || days % 10 === 1 && days !== 11 ? document.getElementById('days').innerHTML = `<time>${days}</time> день` :
         (days === 2) || (days == 3) || (days === 4) || (days % 10 === 2 && !days !== 12) || (days % 10 === 3 && days !== 13) || (days % 10 === 4 && days !== 14) ? document.getElementById('days').innerHTML = `<time>${days}</time> дні` :
-            document.getElementById('days').innerHTML = `<time>${days}</time> днів`
+            document.getElementById('days').innerHTML = `<time>${days}</time> днIв`
 
     hours === 1 || hours % 10 === 1 && hours !== 11 ? document.getElementById('hours').innerHTML = `<time>${hours}</time> година` :
         (hours === 2) || (hours === 3) || (hours === 4) || (hours % 10 === 2 && hours !== 12) || (hours % 10 === 3 && hours !== 13) || (hours % 10 === 4 && hours !== 14) ? document.getElementById('hours').innerHTML = `<time>${hours}</time> години` :
