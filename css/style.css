@@ -233,9 +233,9 @@ body {
 }
 
 .main__countdown {
-  display: grid;
-  grid-template-columns: 0.53fr 0.85fr 1fr 1fr;
-  gap: 10px;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  gap: 20px;
   font-size: 15px;
   animation: contentOpacity 4.4s linear forwards;
   margin-bottom: 5px;
@@ -243,8 +243,8 @@ body {
 
 .main__countdown p {
   line-height: 20px;
+  width: 30px;
 }
-
 .main__countdown time {
   font-size: 22px;
 }
