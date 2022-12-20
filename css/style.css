@@ -158,32 +158,32 @@ body {
 
 .main__trees-6 {
   bottom: -100%;
-  transition: bottom 4s ease 0s;
+  transition: bottom 3s ease 0s;
 }
 
 .main__trees-5 {
   bottom: -80%;
-  transition: bottom 3.5s ease 0s;
+  transition: bottom 2.5s ease 0s;
 }
 
 .main__trees-4 {
   bottom: -60%;
-  transition: bottom 3s ease 0s;
+  transition: bottom 2s ease 0s;
 }
 
 .main__trees-3 {
   bottom: -50%;
-  transition: bottom 2.5s ease 0s;
+  transition: bottom 1.5s ease 0s;
 }
 
 .main__trees-2 {
   bottom: -40%;
-  transition: bottom 2s ease 0s;
+  transition: bottom 1s ease 0s;
 }
 
 .main__trees-1 {
   bottom: -20%;
-  transition: bottom 1.5s ease 0s;
+  transition: bottom 0.8s ease 0s;
 }
 
 .main__trees-6 span {
@@ -212,7 +212,7 @@ body {
 
 .main__mountains {
   bottom: -170%;
-  transition: bottom 4.5s ease 0s;
+  transition: bottom 4s ease 0s;
 }
 
 .main__trees span,
