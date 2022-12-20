@@ -350,7 +350,7 @@ body {
   }
 }
 
-@media (max-width: 768.98px) {
+@media (max-width: 424.98px) {
   .main__content {
     width: 285px;
     height: 285px;
