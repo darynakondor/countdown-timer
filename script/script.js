@@ -1,17 +1,14 @@
-function windowLoad() {
-    function forestAnimation() {
-        const trees = document.querySelectorAll('.main__trees');
-        mountains = document.querySelector('.main__mountains');
+function forestAnimation() {
+    const trees = document.querySelectorAll('.main__trees');
+    mountains = document.querySelector('.main__mountains');
 
-        mountains.classList.add('block');
-        trees.forEach((tree) => {
-            tree.classList.add('block');
-        })
-    }
-    forestAnimation()
+    mountains.classList.add('block');
+    trees.forEach((tree) => {
+        tree.classList.add('block');
+    })
 }
 
-window.addEventListener('load', windowLoad);
+window.requestAnimationFrame(forestAnimation);
 
 const futureDate = new Date('Jan 1 2023 00:00:00')
 
