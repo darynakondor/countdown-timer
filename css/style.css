@@ -27,42 +27,42 @@ body {
 }
 
 @keyframes animate {
-    0% {
-        transform: rotate(-45deg) translateX(0);
-    }
+  0% {
+    transform: rotate(-45deg) translateX(0);
+  }
 
-    70% {
-        opacity: 1;
-    }
+  70% {
+    opacity: 1;
+  }
 
-    100% {
-        transform: rotate(-45deg) translateX(-1000px);
-        opacity: 0;
-    }
+  100% {
+    transform: rotate(-45deg) translateX(-1000px);
+    opacity: 0;
+  }
 }
 
 .main__star span {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, .1),
-            0 0 0 3.5px rgba(255, 255, 255, .1);
-    animation: animate 5s linear infinite;
-    top: 0px;
-    right: 80px;
-    animation-duration: 5s;
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .1),
+    0 0 0 3.5px rgba(255, 255, 255, .1);
+  animation: animate 5s linear infinite;
+  top: 0px;
+  right: 80px;
+  animation-duration: 5s;
 }
 
 .main__star span::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 300px;
-    height: 1px;
-    background: linear-gradient(90deg, #fff, transparent);
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
 }
 
 .main__moon {
@@ -149,7 +149,7 @@ body {
   height: 75px;
   top: calc(50% - 20em);
   left: calc(50% - 10em);
-  animation: santaOpacity 11s linear infinite reverse;
+  animation: santaOpacity 10s linear infinite reverse;
 }
 
 .main__trees {
@@ -225,17 +225,18 @@ body {
   background: url("../img/mountains.svg") center / auto 80% repeat-x;
 }
 
-.main__flex-container {
+.main__inner {
+  width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .main__content {
   width: 300px;
   height: 300px;
-  padding: 50px 31.8px;
+  margin: 0 auto;
+  padding: 55px 45px;
   background: linear-gradient(
     90deg,
     rgba(60, 60, 90, 0.811) 0%,
@@ -249,10 +250,6 @@ body {
   border: 1px dotted rgb(253, 224, 255);
   color: rgb(245, 227, 246);
   font-weight: 700;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 @keyframes contentOpacity {
@@ -268,19 +265,21 @@ body {
 .main__text {
   font-size: 19px;
   animation: contentOpacity 2.5s linear forwards;
-  line-height: 26px;
+  line-height: 1.37;
+  margin-bottom: 25px;
 }
 
 .main__countdown {
   display: flex;
   gap: 27px;
+  justify-content: center;
   font-size: 15px;
   animation: contentOpacity 4.4s linear forwards;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 
 .main__countdown p {
-  line-height: 20px;
+  line-height: 1.18;
   width: 1.73em;
   font-size: 17px;
 }
@@ -393,5 +392,6 @@ body {
   .main__content {
     width: 285px;
     height: 285px;
+    padding: 50px 37px;
   }
 }

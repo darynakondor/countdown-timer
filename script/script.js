@@ -24,7 +24,7 @@ function scoreOfTime() {
     seconds = Math.floor(difference / 1000) % 60;
 
     days === 1 || days % 10 === 1 && days !== 11 ? document.getElementById('days').innerHTML = `<time>${days}</time> день` :
-        (days === 2) || (days == 3) || (days === 4) || (days % 10 === 2 && !days !== 12) || (days % 10 === 3 && days !== 13) || (days % 10 === 4 && days !== 14) ? document.getElementById('days').innerHTML = `<time>${days}</time> днI` :
+        (days === 2) || (days === 3) || (days === 4) || (days % 10 === 2 && days !== 12) || (days % 10 === 3 && days !== 13) || (days % 10 === 4 && days !== 14) ? document.getElementById('days').innerHTML = `<time>${days}</time> днI` :
             document.getElementById('days').innerHTML = `<time>${days}</time> днIв`
 
     document.getElementById('hours').innerHTML = `<time>${hours}</time> год`
