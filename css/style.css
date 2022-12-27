@@ -162,28 +162,28 @@ body {
 }
 
 .main__trees-5 {
-  bottom: -80%;
+  bottom: -100%;
   transition: bottom 2.5s ease 0s;
 }
 
 .main__trees-4 {
-  bottom: -60%;
+  bottom: -100%;
   transition: bottom 2s ease 0s;
 }
 
 .main__trees-3 {
-  bottom: -50%;
+  bottom: -100%;
   transition: bottom 1.5s ease 0s;
 }
 
 .main__trees-2 {
-  bottom: -40%;
-  transition: bottom 1s ease 0s;
+  bottom: -100%;
+  transition: bottom 1.2s ease 0s;
 }
 
 .main__trees-1 {
-  bottom: -20%;
-  transition: bottom 0.8s ease 0s;
+  bottom: -100%;
+  transition: bottom 1s ease 0s;
 }
 
 .main__trees-6 span {
@@ -277,7 +277,7 @@ body {
 
 .main__text {
   font-size: 19px;
-  animation: contentOpacity 2.5s linear forwards;
+  animation: contentOpacity 1.3s linear forwards;
   line-height: 1.37;
   margin-bottom: 25px;
 }
@@ -287,7 +287,7 @@ body {
   gap: 27px;
   justify-content: center;
   font-size: 15px;
-  animation: contentOpacity 4.4s linear forwards;
+  animation: contentOpacity 1.3s linear forwards;
   margin-bottom: 30px;
 }
 
@@ -308,7 +308,7 @@ body {
 .main__music {
   width: 160.5px;
   height: 30px;
-  animation: contentOpacity 4s linear forwards;
+  animation: contentOpacity 1.3s linear forwards;
   border-radius: 25px;
   box-shadow: inset 24px 24px 85px #565a5b, inset -24px -24px 85px #ffffff;
 }
