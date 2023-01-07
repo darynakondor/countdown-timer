@@ -1,4 +1,4 @@
-const futureDate = new Date('Jan 1 2023 00:00:00')
+const futureDate = new Date('Jan 1 2024 00:00:00')
 
 function scoreOfTime() {
     const currentDate = new Date()
